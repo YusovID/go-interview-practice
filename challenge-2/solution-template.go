@@ -22,6 +22,11 @@ func main() {
 
 // ReverseString returns the reversed string of s.
 func ReverseString(s string) string {
-	// TODO: Implement the function
-	return ""
+	sByte := make([]byte, len(s))
+
+	for i := 0; i < len(s); i++ {
+		sByte[len(s)-i-1] = s[i]
+	}
+
+	return string(sByte)
 }
